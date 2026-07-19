@@ -19,6 +19,12 @@ in a browser.
   <voice>(pause for response)</voice>
   ```
   The note color is adjustable via a color picker and is saved per script.
+- **Highlight any spoken text in any color** — select text in the editor,
+  pick a color, and click **Highlight selection**. It wraps the selection in
+  `<color #hex>...</color>`, which renders as colored text on the prompter
+  (tags hidden) — unlike `<voice>` notes, this text is still meant to be
+  spoken, just visually emphasized. You can apply as many different colors
+  as you like across a script.
 - **Local file storage** — no accounts, no cloud:
   - **Chrome / Edge**: link a folder once (via the File System Access API)
     and every save writes a real `.json` file straight into it. The app
@@ -30,6 +36,13 @@ in a browser.
   remembered between sessions. The full-screen prompter display always stays
   dark-grey-on-white regardless of app theme, since that's what's legible
   on a screen while presenting.
+- **Keeps the display awake** while the prompter is running (via the Screen
+  Wake Lock API), so your Mac won't dim, sleep, or start a screensaver
+  mid-read. This requires a supported browser (Chrome, Edge, Safari 16.4+)
+  and, if you're serving the file rather than opening it directly, a secure
+  context (`https://` or `file://`) — it fails silently and harmlessly if
+  unsupported, so it's worth double-checking your display doesn't sleep on
+  a long script the first time you use it.
 - **Keyboard shortcuts** while the prompter is running:
   - `Space` — play / pause
   - `↑` / `↓` — adjust scroll speed
