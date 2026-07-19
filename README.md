@@ -15,7 +15,7 @@ in a browser.
   color (pink by default) on the prompter with the tags themselves hidden,
   so they read as visual cues rather than script text.
   ```
-  <voice>Federica:</voice> Welcome back to the lesson.
+  <voice>Jonny:</voice> Welcome back to the lesson.
   <voice>(pause for response)</voice>
   ```
   The note color is adjustable via a color picker and is saved per script.
